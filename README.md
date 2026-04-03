@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <h3 align="center">
-StateBridge: Latent-State Communication for Multi-Agent Systems
+StateBridge: Training-free Hidden-state Alignment for Latent Communication in LLM Multi-Agent Systems
 </h3>
 
 ---
