@@ -26,7 +26,7 @@ def auto_device(device: Optional[str] = None) -> torch.device:
     return torch.device("cpu")
 
 
-def extract_gsm8k_answer(text: str) -> Optional[str]:
+def extract_gsm8k_answer_1(text: str) -> Optional[str]:
     """Extract answer from \\boxed{} or from text tail.
 
     Priority: \\boxed{} content > standalone letter in tail > number in tail.
@@ -67,7 +67,7 @@ def extract_gsm8k_answer(text: str) -> Optional[str]:
     return None
 
 
-def extract_gsm8k_answer_1(text: str) -> Optional[str]:
+def extract_gsm8k_answer(text: str) -> Optional[str]:
     """Simplified answer extraction: only looks for numbers."""
     boxes = re.findall(r"\\boxed\{([^}]*)\}", text)
     if boxes:

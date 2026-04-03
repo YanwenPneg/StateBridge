@@ -6,19 +6,6 @@ StateBridge: Latent-State Communication for Multi-Agent Systems
 
 ---
 
-## Introduction
-
-**StateBridge** enables multi-agent collaboration through **latent-state communication** — agents exchange information by passing aligned hidden states rather than generating full text.
-
-The core alignment pipeline uses **Whitened Orthogonal Procrustes** to map hidden states into the embedding space:
-1. **Center** both hidden-state and embedding distributions
-2. **Whiten** via regularized covariance decomposition
-3. **Rotate** using Orthogonal Procrustes (SVD-based)
-4. **Reconstruct** in embedding space with norm calibration and vocabulary snapping
-
-This achieves **superior performance** with **significantly fewer tokens** compared to text-based multi-agent systems.
-
-
 ## Repository Structure
 
 ```
@@ -86,13 +73,3 @@ python -m methods.state_bridge --model Qwen/Qwen3-8B --run_all --gpus 0,1,2,3
 | `--collect_viz` | `False` | Collect alignment vectors for visualization |
 
 
-## Citation
-
-```bibtex
-@article{zou2025latentmas,
-  title={Latent Collaboration in Multi-Agent Systems},
-  author={Zou, Jiaru and Yang, Xiyuan and Qiu, Ruizhong and Li, Gaotang and Tieu, Katherine and Lu, Pan and Shen, Ke and Tong, Hanghang and Choi, Yejin and He, Jingrui and Zou, James and Wang, Mengdi and Yang, Ling},
-  journal={arXiv preprint arXiv:2511.20639},
-  year={2025}
-}
-```
