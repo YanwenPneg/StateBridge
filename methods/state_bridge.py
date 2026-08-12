@@ -168,7 +168,7 @@ class StateBridge:
         pool_size: int = 4,
         alignment_mode: str = "adaptive",
         adaptive_reg: float = 1e-3,
-        snap_ratio: float = 0.35,
+        snap_ratio: float = 0.3,
         debug_mode: bool = False,
         use_hook: bool = True,
         collect_viz: bool = False,
@@ -760,7 +760,7 @@ def gpu_worker(
         prefix_strategy=config.get("prefix_strategy", "scale"),
         enable_thinking=config["enable_thinking"],
         adaptive_reg=config.get("adaptive_reg", 1e-3),
-        snap_ratio=config.get("snap_ratio", 0.35),
+        snap_ratio=config.get("snap_ratio", 0.3),
         debug_mode=config.get("debug_mode", False),
         use_hook=config.get("use_hook", True),
         collect_viz=config.get("collect_viz", False),
@@ -1014,12 +1014,12 @@ TASK_CONFIG = {
     "gsm8k": {"max_new_tokens": 2048},
     "aime2024": {"max_new_tokens": 20000},
     "aime2025": {"max_new_tokens": 20000},
-    "gpqa": {"max_new_tokens": 8096},
+    "gpqa": {"max_new_tokens": 8192},
     "arc_easy": {"max_new_tokens": 2048},
     "arc_challenge": {"max_new_tokens": 2048},
     "mbppplus": {"max_new_tokens": 4096},
     "humanevalplus": {"max_new_tokens": 4096},
-    "medqa": {"max_new_tokens": 8096},
+    "medqa": {"max_new_tokens": 8192},
     "winogrande": {"max_new_tokens": 2048},
 }
 
@@ -1129,7 +1129,7 @@ def main():
     parser.add_argument("--temperature", type=float, default=0.6, help="Temperature")
     parser.add_argument("--max_prefix_tokens", type=int, default=64, help="Max prefix tokens")
     parser.add_argument("--adaptive_reg", type=float, default=1e-3, help="Regularization for covariance whitening")
-    parser.add_argument("--snap_ratio", type=float, default=0.35, help="Snap-to-nearest-embedding ratio")
+    parser.add_argument("--snap_ratio", type=float, default=0.3, help="Snap-to-nearest-embedding ratio")
     parser.add_argument("--prompt", type=str, choices=["sequential", "hierarchical"], 
                         default="sequential", help="Multi-agent architecture")
     parser.add_argument("--gpus", type=str, default=None, help="Comma-separated GPU IDs")
