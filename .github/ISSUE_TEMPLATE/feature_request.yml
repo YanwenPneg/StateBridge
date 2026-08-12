@@ -1,0 +1,49 @@
+name: Feature request
+description: Propose a new model, benchmark, or capability
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check [RELEASE_NOTES.md](https://github.com/YanwenPneg/StateBridge/blob/main/RELEASE_NOTES.md) first. Paper baselines, one-off ablations, and analysis scripts are outside this repository's scope.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - New model support
+        - New benchmark or task
+        - Method extension
+        - Interface or usability
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Research question
+      description: What would this let you investigate that you cannot investigate today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What you have in mind, including the interface if you have one.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Would you be willing to submit a pull request?
+      options:
+        - "Yes"
+        - "Yes, with guidance"
+        - "No"
+    validations:
+      required: true

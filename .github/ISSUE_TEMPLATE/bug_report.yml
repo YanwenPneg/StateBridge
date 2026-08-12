@@ -1,0 +1,69 @@
+name: Bug report
+description: Report an error, a crash, or a result that does not match the paper
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Reproduction gaps count as bugs: if a documented command does not produce the documented number, please file it here.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: The exact command you ran, including all flags.
+      render: bash
+      placeholder: python -m methods.state_bridge --model Qwen/Qwen3-4B --task gsm8k --gpus 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Traceback or output
+      description: Full traceback for a crash, or the scores you obtained alongside the scores you expected.
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: Qwen/Qwen3-4B
+    validations:
+      required: true
+
+  - type: input
+    id: hardware
+    attributes:
+      label: GPU type and count
+      placeholder: 2x A100-80G
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: "Output of: `python -V && pip list | grep -E 'torch|transformers|accelerate|datasets'`"
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: StateBridge version or commit
+      description: Contents of VERSION, or the commit SHA you are on.
+      placeholder: 0.1.0
+    validations:
+      required: true

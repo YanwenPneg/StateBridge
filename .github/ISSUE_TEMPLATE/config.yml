@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question about the method or paper
+    url: https://github.com/YanwenPneg/StateBridge/discussions
+    about: Use Discussions for conceptual questions about alignment, the four-agent pipeline, or the experimental setup.
+  - name: Contact the authors
+    url: mailto:ypeng86@sheffield.ac.uk
+    about: For collaboration or press enquiries.
