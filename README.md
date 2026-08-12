@@ -202,7 +202,7 @@ python -m methods.state_bridge --model Qwen/Qwen3-8B --task gpqa --gpus 0,1,2,3
 python -m methods.state_bridge --model Qwen/Qwen3-8B --run_all --gpus 0,1,2,3
 ```
 
-`--run_all` includes MedQA and therefore requires a user-provided `data/medqa.json`; see [data/README.md](data/README.md#medqa).
+GPQA-Diamond and MedQA ship with the repository. The remaining benchmarks are downloaded from Hugging Face on first use. See [data/README.md](data/README.md) for provenance and licensing.
 
 ### Use it in your own pipeline
 
@@ -442,7 +442,8 @@ This release provides the core method, prompts, dataset adapters, and evaluator 
 - StateBridge code is released under the [Apache License 2.0](LICENSE).
 - Third-party datasets and model weights are not covered by that license. See [data/README.md](data/README.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 - The bundled GPQA-Diamond transformation remains under CC BY 4.0 with attribution and changes recorded.
-- MedQA and model weights are not distributed by this repository. Users obtain them under their respective upstream terms.
+- The bundled MedQA subset remains under the MIT License, redistributed with the upstream copyright and permission notice.
+- Model weights are not distributed by this repository. Users obtain them under their respective upstream terms.
 
 ## Contributing
 

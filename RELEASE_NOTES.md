@@ -15,7 +15,7 @@ This is the first public StateBridge release. It provides the core training-free
 ### Scope
 
 - All agents in a run use the same pretrained model weights.
-- Model weights and MedQA data are not distributed with this repository.
+- Model weights are not distributed with this repository.
 - Paper baselines, one-off ablations, and analysis scripts are outside this core release.
 - CLI and internal interfaces may change during the `0.x` series.
 

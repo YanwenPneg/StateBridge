@@ -42,6 +42,49 @@ GPQA citation:
 }
 ```
 
+## MedQA
+
+[`data/medqa.json`](data/medqa.json) is the 300-question evaluation subset drawn from [MedQA](https://github.com/jind11/MedQA).
+
+MedQA is licensed under the MIT License. The upstream copyright and permission notice is reproduced in full below, as that license requires.
+
+```text
+MIT License
+
+Copyright (c) 2022 Di Jin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+MedQA questions originate from professional medical licensing examinations. The benchmark is intended for research and is not clinical guidance. No endorsement by the original authors is implied.
+
+MedQA citation:
+
+```bibtex
+@article{jin2020disease,
+  title   = {What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams},
+  author  = {Jin, Di and Pan, Eileen and Oufattole, Nassim and Weng, Wei-Hung and Fang, Hanyi and Szolovits, Peter},
+  journal = {arXiv preprint arXiv:2009.13081},
+  year    = {2020}
+}
+```
+
 ## Runtime Dependencies and Model Weights
 
 Python packages listed in `requirements.txt` are installed from their respective distributions and are not vendored in this repository. Each package remains subject to its own license.
