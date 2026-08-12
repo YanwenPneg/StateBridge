@@ -1,5 +1,5 @@
 torch --index-url https://download.pytorch.org/whl/cu124
-transformers
+transformers>=4.51.0
 numpy
 tqdm
 accelerate

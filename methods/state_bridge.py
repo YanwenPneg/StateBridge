@@ -183,7 +183,7 @@ class StateBridge:
         self.enable_thinking = enable_thinking
         
         self.prefix_strategy = prefix_strategy
-        self.prefix_scale = 0.8
+        self.prefix_scale = 1.0
         self.noise_std = noise_std
         self.pool_size = pool_size
         
@@ -830,7 +830,7 @@ class ParallelEvaluator:
         self.logger.log(f"Already completed (from log): {len(completed)}")
         self.logger.log(f"Pending: {len(pending_indices)}")
         self.logger.log(f"GPUs: {self.gpu_ids}")
-        self.logger.log(f"Prefix Strategy: scale (scale=0.8)")
+        self.logger.log(f"Prefix Strategy: scale (scale=1.0)")
         self.logger.log("=" * 60)
         
         if not pending_indices:
