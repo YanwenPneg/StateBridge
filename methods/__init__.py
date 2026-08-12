@@ -1,3 +1,6 @@
+# Agent definitions adapted from LatentMAS (https://github.com/Gen-Verse/LatentMAS).
+# Licensed under Apache-2.0. See THIRD_PARTY_NOTICES.md.
+
 from dataclasses import dataclass
 from typing import List
 

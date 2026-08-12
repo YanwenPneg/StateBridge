@@ -1,3 +1,7 @@
+# Portions adapted from LatentMAS (https://github.com/Gen-Verse/LatentMAS).
+# Licensed under Apache-2.0 and modified by the StateBridge authors.
+# See THIRD_PARTY_NOTICES.md.
+
 """
 Model wrapper for HuggingFace Transformers backend.
 
